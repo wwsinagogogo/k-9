@@ -42,7 +42,6 @@ import android.os.Process;
 import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.support.annotation.VisibleForTesting;
-import android.support.annotation.WorkerThread;
 import android.util.Log;
 
 import com.fsck.k9.Account;
@@ -186,7 +185,6 @@ public class MessagingController {
         controllerThread.join(1000L);
     }
 
-    @WorkerThread
     private void runInBackground() {
         Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
         while (!stopped) {
