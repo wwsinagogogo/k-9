@@ -133,12 +133,10 @@ public class MessagingController {
     private static MessagingController inst = null;
 
 
-    // injected state
     private final Context context;
     private final Contacts contacts;
     private final NotificationController notificationController;
 
-    // private immutable state
     private final Thread controllerThread;
 
     private final BlockingQueue<Command> queuedCommands = new PriorityBlockingQueue<>();
